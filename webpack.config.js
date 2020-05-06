@@ -5,7 +5,12 @@ const path = require('path');  // From node library
 module.exports = {
     entry:'./src/index.js',
     output:{
-        path:path.resolve(__dirname, 'dist/assets'),
+        path:path.resolve(__dirname, 'dist/assets'),   // __dirname to go to project root
         filename:'bundle.js'
+    },
+    // devServer serves virtual file
+    devServer:{
+        contentBase: path.resolve(__dirname, 'dist'), // folder to serve to browser
+        publicPath:'/assets/' // path from inside 'dist' folder
     }
 };  
