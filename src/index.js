@@ -1,10 +1,7 @@
-const greet = (name) =>{
-    console.log(`hello ${name}`);
-};
+// import './dom';
+import {styleBody , addTitle, greeting} from './dom'; // Not only function but dom.js will also be loaded
 
-greet('viv');
-greet('viv-bhai');
-greet('viveshCodes');
-greet('vivesh');
+console.log('index file');
+addTitle('test export');
 
-
+console.log(greeting);
