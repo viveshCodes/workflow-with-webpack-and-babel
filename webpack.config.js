@@ -12,5 +12,18 @@ module.exports = {
     devServer:{
         contentBase: path.resolve(__dirname, 'dist'), // folder to serve to browser
         publicPath:'/assets/' // path from inside 'dist' folder
+    },
+    // to run babel
+    module:{
+        rules:[{
+            test:/\.js$/,
+            exclude:/node_modules/,
+            use:{
+                loader:'babel-loader',
+                options:{
+                   presets: ['@babel/preset-env']
+                }    
+            }
+        }]
     }
 };  
